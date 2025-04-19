@@ -1,0 +1,9 @@
+/* WritingAnimation.css */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.writing-animation {
+    font-family: monospace;
+    display: inline-block;
+}

@@ -1,0 +1,29 @@
+/* NGOs.css */
+.ngos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ngo-card {
+    background: #f8f9fa;
+    border: 2px solid #b72021; /* Blue border for cards */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+  }
+  
+  .ngo-name {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .ngo-description {
+    font-size: 16px;
+    color: #6c757d; /* Subtle color for description text */
+  }

@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+body {
+  background-color: #f9ebdd; /* Light Mint Green */
+  color: #35352d; /* Dark Teal for general text */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.card-tag {
+  font-size: 0.625rem;
+  font-weight: 700;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  user-select: none;
+  margin-left: 0.25rem;
+  white-space: nowrap;
+  transition: background-color 0.3s ease; /* Smooth background transition */
+  background-color: #ebc7ac; /* Pale Peach for tags */
+  color: #35352d; /* Dark Teal Text */
+}
+
+.card-shadow {
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.card-shadow:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.btn-link-custom {
+  color: #35352d; /* Dark Teal */
+  font-weight: 500;
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.btn-link-custom:hover {
+  text-decoration: underline;
+  color: #4cb1be; /* Soft Coral on hover */
+}
+
+.rounded-lg-custom {
+  border-radius: 0.5rem;
+}
+
+.bg-beige {
+  background-color: #daac80; /* Light Beige */
+}
+
+/* Button animations */
+.role-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0 0.5rem;
+  font-weight: 600;
+  color: #35352d; /* Dark Teal */
+}
+
+.role-button.small {
+  font-size: 0.875rem;
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: transform 0.2s ease, opacity 0.2s ease; /* Added transitions */
+}
+
+.role-button.small:hover {
+  opacity: 1;
+  transform: scale(1); /* Scale up on hover */
+}
+
+.role-button.active {
+  font-size: 1.25rem;
+  border-bottom: 2px solid #35352d; /* Dark Teal underline */
+  padding-bottom: 0.25rem;
+  cursor: default;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Keyframe animation for elements that enter the viewport */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade-in animation for cards */
+.card {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 576px) {
+  .role-button.active {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* This will apply styles only on mobile devices */
+  .navbar-nav {
+    width: 100%; /* Full width for nav items on mobile */
+    justify-content: flex-start; /* Left align items */
+  }
+  .navbar {
+    padding: 0 10px; /* Adjust navbar padding if needed */
+  }
+}
+
+@media (min-width: 769px) {
+  /* This will apply styles only on larger screens */
+  .navbar-nav {
+    width: auto; /* Remove full width */
+    justify-content: center; /* Center align items */
+  }
+}
+
+/* Style for individual NGO cards */
+.white-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.white-image {
+  display: block;
+  width: 100%;
+  border-radius: 8px; /* Match with overlay */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(76, 177, 190, 0.6); /* Soft Coral with some transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px; /* Match with image corners */
+  color: white; /* Text color for the overlay */
+  font-weight: bold; /* Font weight for the overlay text */
+  font-size: 1.2rem; /* Font size for the overlay text */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.white-card.selected .overlay {
+  opacity: 1; /* Show overlay when selected */
+}
+
+/* Additional styling for spacing */
+.row {
+  margin-left: 0; /* Remove default Bootstrap left margin */
+  margin-right: 0; /* Remove default Bootstrap right margin */
+}
+
+/* Firecracker effect */
+.firecracker {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #fb6c6c, #b11515); /* Teal colors for firecracker */
+  border-radius: 50%;
+  pointer-events: none; /* Prevent mouse events on the firecracker */
+  animation: explode 0.6s ease forwards;
+}
+
+/* Animation for the firecracker effect */
+@keyframes explode {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(3);
+      opacity: 0;
+  }
+}
+
+/* Additional styles for your components */
+.event-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ngo-card {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ngo-card.selected {
+  border: 2px solid rgb(81, 159, 14);
+}
+
+.ngo-card-content {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(13, 133, 131, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-weight: bold;
+}

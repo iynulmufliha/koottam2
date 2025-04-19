@@ -1,0 +1,53 @@
+/* Concert.css */
+.concert-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ticket-card {
+    position: relative;
+    background: #f8f9fa;
+    border: 2px solid #b72021; 
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .ticket-header {
+    border-bottom: 1px solid #b72021;
+    margin-bottom: 10px;
+  }
+  
+  .event-name {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .event-date {
+    font-size: 16px;
+    margin: 0;
+    color: #6c757d; /* Subtle color for date */
+  }
+  
+  .ticket-body {
+    margin-top: 10px;
+  }
+  
+  .time {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .venue {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  /* Optional: Add CSS for more ticket-like style */

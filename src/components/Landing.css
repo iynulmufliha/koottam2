@@ -1,0 +1,68 @@
+body {
+  margin: 0; /* Remove default margin */
+}
+
+.landing-container {
+  position: relative; /* Make the container relative for absolute positioning */
+  width: 100%; /* Make it responsive */
+  height: 400px; /* Adjust height as needed */
+  overflow: hidden; /* Prevent overflow if the image doesn't fit the div */
+}
+
+.landing-panel {
+  width: 100%;
+  height: 100%;
+  background-size: contain; /* Keep aspect ratio, fit within the div without cropping */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  background-position: center; /* Center the image */
+  position: relative; /* To position the overlay text */
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 20px; /* Position text from the bottom */
+  left: 20px; /* Position text from the left */
+  color: white; /* Text color */
+  font-size: 24px; /* Adjust text size */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+  padding: 10px; /* Padding for better visibility */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.arrow {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center the arrow vertically */
+  background-color: rgba(255, 255, 255, 0.7); /* Background for arrows */
+  border: none; /* No default button border */
+  font-size: 30px; /* Arrow size */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 50%; /* Rounded shape */
+  padding: 10px; /* Space for better clicking */
+  z-index: 1000; /* Ensure arrows appear above images */
+}
+
+.arrow.left {
+  left: 20px; /* Position left arrow */
+}
+
+.arrow.right {
+  right: 20px; /* Position right arrow */
+}
+
+/* Provide some hover style */
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 1); /* Solid background on hover */
+}
+
+/* Additional styling for responsive design */
+@media (max-width: 768px) {
+  .landing-container {
+    height: 100vh; /* Ensure it uses full height on mobile */
+  }
+
+  .landing-panel {
+    background-size: contain; /* Keep it covering on mobile too */
+    background-repeat: no-repeat; /* Prevent repeating of images */
+  }
+}
